@@ -7,3 +7,11 @@ function getPositiveDoubles(arr: number[]) {
 }
 
 console.log(getPositiveDoubles(array));
+
+function getPositiveDoublesReduced(arr: number[]) {
+  return arr.reduce<number[]>((acc, x) => {
+    return x >= 0 ? [...acc, x * x] : acc;
+  }, []);
+}
+
+console.log(getPositiveDoublesReduced(array));
